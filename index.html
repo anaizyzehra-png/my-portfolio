@@ -1,0 +1,1121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Laiba Anees | Portfolio</title>
+
+    <style>
+
+        /* =========================
+           BASIC SETTINGS
+        ========================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #ffffff;
+            color: #222222;
+            line-height: 1.7;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+
+        /* =========================
+           NAVIGATION
+        ========================== */
+
+        header {
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background: rgba(255, 255, 255, 0.95);
+            border-bottom: 1px solid #eeeeee;
+            z-index: 1000;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px 30px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+            letter-spacing: -1px;
+        }
+
+        .logo span {
+            color: #888888;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 28px;
+        }
+
+        nav ul li a {
+            font-size: 14px;
+            color: #444444;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #999999;
+        }
+
+
+        /* =========================
+           HERO
+        ========================== */
+
+        .hero {
+            min-height: 100vh;
+
+            max-width: 1200px;
+            margin: auto;
+
+            padding: 150px 30px 80px;
+
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .tag {
+            font-size: 12px;
+            letter-spacing: 4px;
+            color: #888888;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: clamp(50px, 8vw, 90px);
+            line-height: 1;
+            letter-spacing: -5px;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 span {
+            color: #888888;
+        }
+
+        .hero h2 {
+            font-size: 27px;
+            font-weight: normal;
+            margin-bottom: 20px;
+        }
+
+        .hero-description {
+            max-width: 650px;
+            color: #666666;
+            font-size: 17px;
+        }
+
+        .hero-buttons {
+            margin-top: 35px;
+            display: flex;
+            gap: 15px;
+        }
+
+        .button {
+            padding: 13px 25px;
+            background: #222222;
+            color: white;
+            border-radius: 3px;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            background: #555555;
+        }
+
+        .button-outline {
+            padding: 13px 25px;
+            border: 1px solid #222222;
+            border-radius: 3px;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .button-outline:hover {
+            background: #222222;
+            color: white;
+        }
+
+
+        /* =========================
+           GENERAL SECTIONS
+        ========================== */
+
+        section {
+            padding: 110px 30px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .section-label {
+            font-size: 12px;
+            letter-spacing: 4px;
+            color: #888888;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .section-title {
+            font-size: 45px;
+            letter-spacing: -2px;
+            margin-bottom: 45px;
+        }
+
+
+        /* =========================
+           ABOUT
+        ========================== */
+
+        .about {
+            background: #f7f7f5;
+        }
+
+        .about-content {
+            max-width: 850px;
+        }
+
+        .about-content p {
+            color: #555555;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        .about-content strong {
+            color: #222222;
+        }
+
+
+        /* =========================
+           SKILLS
+        ========================== */
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .skill {
+            border: 1px solid #dddddd;
+            padding: 30px;
+            transition: 0.3s;
+        }
+
+        .skill:hover {
+            transform: translateY(-5px);
+            border-color: #999999;
+        }
+
+        .skill-number {
+            font-size: 12px;
+            color: #999999;
+        }
+
+        .skill h3 {
+            margin: 12px 0 8px;
+            font-size: 21px;
+        }
+
+        .skill p {
+            color: #666666;
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           PROJECTS
+        ========================== */
+
+        .projects {
+            background: #ffffff;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .project {
+            border: 1px solid #dddddd;
+            padding: 40px;
+            min-height: 280px;
+            position: relative;
+            transition: 0.3s;
+        }
+
+        .project:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.06);
+        }
+
+        .project-number {
+            font-size: 13px;
+            color: #999999;
+        }
+
+        .project h3 {
+            font-size: 28px;
+            margin: 20px 0 12px;
+        }
+
+        .project p {
+            color: #666666;
+        }
+
+        .project-tag {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 6px 12px;
+            background: #f2f2f2;
+            font-size: 12px;
+        }
+
+
+        /* =========================
+           EXPERIENCE
+        ========================== */
+
+        .experience {
+            background: #f7f7f5;
+        }
+
+        .experience-list {
+            max-width: 850px;
+        }
+
+        .experience-item {
+            border-left: 2px solid #cccccc;
+            padding: 0 0 40px 30px;
+            margin-bottom: 10px;
+        }
+
+        .experience-item:last-child {
+            padding-bottom: 0;
+        }
+
+        .experience-item h3 {
+            font-size: 23px;
+            margin-bottom: 5px;
+        }
+
+        .experience-role {
+            color: #888888;
+            font-size: 14px;
+            margin-bottom: 12px;
+        }
+
+        .experience-item p {
+            color: #555555;
+            font-size: 15px;
+        }
+
+
+        /* =========================
+           EDUCATION
+        ========================== */
+
+        .education-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .education-card {
+            border: 1px solid #dddddd;
+            padding: 30px;
+        }
+
+        .education-card h3 {
+            font-size: 21px;
+            margin-bottom: 8px;
+        }
+
+        .education-card p {
+            color: #777777;
+        }
+
+        .current {
+            border-top: 4px solid #222222;
+        }
+
+        .current strong {
+            display: block;
+            margin-top: 15px;
+            font-size: 13px;
+        }
+
+
+        /* =========================
+           INTERESTS
+        ========================== */
+
+        .interests {
+            background: #f7f7f5;
+        }
+
+        .interest-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .interest {
+            border: 1px solid #cccccc;
+            padding: 10px 18px;
+            background: white;
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           CONTACT
+        ========================== */
+
+        .contact {
+            background: #222222;
+            color: white;
+            text-align: center;
+        }
+
+        .contact .section-label {
+            color: #aaaaaa;
+        }
+
+        .contact .section-title {
+            margin-bottom: 15px;
+        }
+
+        .contact-description {
+            color: #cccccc;
+            max-width: 600px;
+            margin: auto;
+        }
+
+        .contact-box {
+            max-width: 550px;
+            margin: 35px auto 0;
+            border: 1px solid #555555;
+            padding: 25px;
+        }
+
+        .contact-box p {
+            margin: 8px 0;
+            color: #dddddd;
+        }
+
+        .contact-box span {
+            color: #999999;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================== */
+
+        footer {
+            background: #222222;
+            border-top: 1px solid #444444;
+            text-align: center;
+            color: #888888;
+            padding: 22px;
+            font-size: 12px;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================== */
+
+        @media (max-width: 800px) {
+
+            nav ul {
+                display: none;
+            }
+
+            .hero {
+                padding-top: 130px;
+            }
+
+            .hero h1 {
+                font-size: 55px;
+                letter-spacing: -3px;
+            }
+
+            .hero h2 {
+                font-size: 21px;
+            }
+
+            .skills-grid,
+            .projects-grid,
+            .education-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: 36px;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+
+    <header>
+
+        <nav>
+
+            <div class="logo">
+                Laiba<span>.</span>
+            </div>
+
+            <ul>
+
+                <li>
+                    <a href="#home">Home</a>
+                </li>
+
+                <li>
+                    <a href="#about">About</a>
+                </li>
+
+                <li>
+                    <a href="#skills">Skills</a>
+                </li>
+
+                <li>
+                    <a href="#projects">Projects</a>
+                </li>
+
+                <li>
+                    <a href="#experience">Experience</a>
+                </li>
+
+                <li>
+                    <a href="#education">Education</a>
+                </li>
+
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =========================
+         HOME
+    ========================== -->
+
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+
+            <p class="tag">
+                BSCS STUDENT • TECHNOLOGY ENTHUSIAST
+            </p>
+
+            <h1>
+                Hi, I'm <span>Laiba Anees.</span>
+            </h1>
+
+            <h2>
+                Computer Science Student at NUML University
+            </h2>
+
+            <p class="hero-description">
+
+                I am a passionate 4th-semester BSCS student who enjoys
+                exploring technology, robotics, programming and creative
+                problem-solving. I am continuously learning and building
+                practical skills through academic projects and professional
+                experiences.
+
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#projects" class="button">
+                    View Projects
+                </a>
+
+                <a href="#contact" class="button-outline">
+                    Contact Me
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         ABOUT
+    ========================== -->
+
+    <section id="about" class="about">
+
+        <div class="container">
+
+            <p class="section-label">
+                ABOUT ME
+            </p>
+
+            <h2 class="section-title">
+                A little about me
+            </h2>
+
+            <div class="about-content">
+
+                <p>
+                    My name is <strong>Laiba Anees</strong> and I am currently
+                    studying BSCS in my 4th semester at
+                    <strong>NUML University</strong>.
+                </p>
+
+                <p>
+                    I have a strong interest in technology and enjoy learning
+                    about different areas of computer science. I am especially
+                    interested in robotics, programming, databases and
+                    developing practical systems.
+                </p>
+
+                <p>
+                    Along with my academic journey, I have gained practical
+                    experience in different professional environments. These
+                    experiences have helped me improve my communication,
+                    teamwork, teaching and problem-solving abilities.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         SKILLS
+    ========================== -->
+
+    <section id="skills">
+
+        <div class="container">
+
+            <p class="section-label">
+                MY SKILLS
+            </p>
+
+            <h2 class="section-title">
+                Skills & Interests
+            </h2>
+
+            <div class="skills-grid">
+
+
+                <div class="skill">
+
+                    <span class="skill-number">
+                        01
+                    </span>
+
+                    <h3>
+                        Web Development
+                    </h3>
+
+                    <p>
+                        Building structured and clean web pages using
+                        HTML and CSS.
+                    </p>
+
+                </div>
+
+
+                <div class="skill">
+
+                    <span class="skill-number">
+                        02
+                    </span>
+
+                    <h3>
+                        Programming
+                    </h3>
+
+                    <p>
+                        Developing programming knowledge and improving
+                        logical problem-solving skills.
+                    </p>
+
+                </div>
+
+
+                <div class="skill">
+
+                    <span class="skill-number">
+                        03
+                    </span>
+
+                    <h3>
+                        Database Systems
+                    </h3>
+
+                    <p>
+                        Understanding database concepts and developing
+                        management systems.
+                    </p>
+
+                </div>
+
+
+                <div class="skill">
+
+                    <span class="skill-number">
+                        04
+                    </span>
+
+                    <h3>
+                        Robotics
+                    </h3>
+
+                    <p>
+                        Practical interest and experience in robotics
+                        laboratory environments.
+                    </p>
+
+                </div>
+
+
+                <div class="skill">
+
+                    <span class="skill-number">
+                        05
+                    </span>
+
+                    <h3>
+                        Communication
+                    </h3>
+
+                    <p>
+                        Experience in teaching, training, customer support
+                        and working with people.
+                    </p>
+
+                </div>
+
+
+                <div class="skill">
+
+                    <span class="skill-number">
+                        06
+                    </span>
+
+                    <h3>
+                        Problem Solving
+                    </h3>
+
+                    <p>
+                        Enjoy finding practical solutions and learning
+                        new technologies.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         PROJECTS
+    ========================== -->
+
+    <section id="projects" class="projects">
+
+        <div class="container">
+
+            <p class="section-label">
+                MY WORK
+            </p>
+
+            <h2 class="section-title">
+                Academic Projects
+            </h2>
+
+
+            <div class="projects-grid">
+
+
+                <div class="project">
+
+                    <span class="project-number">
+                        PROJECT 01
+                    </span>
+
+                    <h3>
+                        Gym Management System
+                    </h3>
+
+                    <p>
+                        A management system designed to organize gym
+                        information and simplify everyday management
+                        activities.
+                    </p>
+
+                    <span class="project-tag">
+                        Management System
+                    </span>
+
+                </div>
+
+
+                <div class="project">
+
+                    <span class="project-number">
+                        PROJECT 02
+                    </span>
+
+                    <h3>
+                        Library Management System
+                    </h3>
+
+                    <p>
+                        A system designed to organize library records,
+                        books, members and daily library operations
+                        efficiently.
+                    </p>
+
+                    <span class="project-tag">
+                        Database Project
+                    </span>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         EXPERIENCE
+    ========================== -->
+
+    <section id="experience" class="experience">
+
+        <div class="container">
+
+            <p class="section-label">
+                EXPERIENCE
+            </p>
+
+            <h2 class="section-title">
+                Professional Experience
+            </h2>
+
+
+            <div class="experience-list">
+
+
+                <div class="experience-item">
+
+                    <h3>
+                        Robotics Lab Instructor
+                    </h3>
+
+                    <p class="experience-role">
+                        Lab Instructor
+                    </p>
+
+                    <p>
+                        Assisted students with practical robotics activities
+                        and provided guidance in a laboratory environment.
+                    </p>
+
+                </div>
+
+
+                <div class="experience-item">
+
+                    <h3>
+                        Fitness Gym
+                    </h3>
+
+                    <p class="experience-role">
+                        Receptionist
+                    </p>
+
+                    <p>
+                        Managed reception responsibilities, communicated
+                        with visitors and supported daily gym operations.
+                    </p>
+
+                </div>
+
+
+                <div class="experience-item">
+
+                    <h3>
+                        AZDMS Office
+                    </h3>
+
+                    <p class="experience-role">
+                        Trainer
+                    </p>
+
+                    <p>
+                        Provided training and assisted individuals with
+                        learning and completing practical tasks.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         EDUCATION
+    ========================== -->
+
+    <section id="education">
+
+        <div class="container">
+
+            <p class="section-label">
+                EDUCATION
+            </p>
+
+            <h2 class="section-title">
+                My Academic Journey
+            </h2>
+
+
+            <div class="education-grid">
+
+
+                <div class="education-card">
+
+                    <h3>
+                        TCF School
+                    </h3>
+
+                    <p>
+                        School Education
+                    </p>
+
+                </div>
+
+
+                <div class="education-card">
+
+                    <h3>
+                        Fazaia College
+                    </h3>
+
+                    <p>
+                        College Education
+                    </p>
+
+                </div>
+
+
+                <div class="education-card current">
+
+                    <h3>
+                        NUML University
+                    </h3>
+
+                    <p>
+                        BSCS — 4th Semester
+                    </p>
+
+                    <strong>
+                        Expected Graduation: 2028
+                    </strong>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         INTERESTS
+    ========================== -->
+
+    <section class="interests">
+
+        <div class="container">
+
+            <p class="section-label">
+                INTERESTS
+            </p>
+
+            <h2 class="section-title">
+                Things I Enjoy
+            </h2>
+
+
+            <div class="interest-list">
+
+                <span class="interest">
+                    Technology
+                </span>
+
+                <span class="interest">
+                    Robotics
+                </span>
+
+                <span class="interest">
+                    Programming
+                </span>
+
+                <span class="interest">
+                    Creative Projects
+                </span>
+
+                <span class="interest">
+                    Learning New Skills
+                </span>
+
+                <span class="interest">
+                    Problem Solving
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         CONTACT
+    ========================== -->
+
+    <section id="contact" class="contact">
+
+        <div class="container">
+
+            <p class="section-label">
+                GET IN TOUCH
+            </p>
+
+            <h2 class="section-title">
+                Let's Connect
+            </h2>
+
+            <p class="contact-description">
+
+                Interested in technology, projects or collaboration?
+                Feel free to get in touch with me.
+
+            </p>
+
+
+            <div class="contact-box">
+
+                <p>
+                    <span>Email:</span>
+                    Add your email here
+                </p>
+
+                <p>
+                    <span>Phone:</span>
+                    Add your phone number here
+                </p>
+
+                <p>
+                    <span>University:</span>
+                    NUML University
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <p>
+            © 2026 Laiba Anees | BSCS Portfolio
+        </p>
+
+    </footer>
+
+
+</body>
+</html>
